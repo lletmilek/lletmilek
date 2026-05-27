@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LLETMI LEK Music</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <h1>Vetem per LLETMI lek</h1>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <button class="menu-toggle">☰</button>
+
+  <div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div>
+
+        <h1 class="logo">LLETMI lek</h1>
+
+        <nav>
+          <ul>
+            <li class="active">🏠 Home</li>
+            <li>🔍 Search</li>
+            <li>🎧 Library</li>
+            <li>❤️ Favorites</li>
+            <li>🎵 Playlists</li>
+            <li>🕒 Recently Played</li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <!-- PROFILE -->
+      <div class="profile">
+
+        <img src="https://i.pravatar.cc/100" alt="">
+
+        <div>
+          <h4>Premium User</h4>
+          <p>LLETMI lek Music</p>
+        </div>
+
+      </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <!-- TOPBAR -->
+      <header class="topbar">
+
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search songs or artists..."
+          >
+        </div>
+
+        <div class="top-actions">
+
+          <button id="themeToggle">🌙</button>
+
+          <button>🔔</button>
+
+          <img src="profile image.jpg" alt="">
+
+        </div>
+
+      </header>
+
+      <!-- HERO -->
+      <section class="hero glass">
+
+        <div class="hero-content">
+
+          <h1>Latest Albanian Music</h1>
+
+          <p>
+            LLETMI lek kur ti keni
+          </p>
+
+          <button class="hero-btn">Start Listening</button>
+
+        </div>
+
+      </section>
+
+      <!-- SONGS -->
+      <section>
+
+        <div class="section-title">
+          <h2>Trending Songs</h2>
+        </div>
+
+        <div class="songs-grid" id="songsGrid"></div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- PLAYER -->
+  <footer class="player glass">
+
+    <div class="song-info">
+
+      <img id="playerCover" src="covers/cover1.jpg" alt="">
+
+      <div>
+        <h4 id="playerTitle">No song selected</h4>
+        <p id="playerArtist">---</p>
+      </div>
+
+    </div>
+
+    <div class="player-center">
+
+      <div class="controls">
+
+        <button id="prevBtn">⏮</button>
+
+        <button id="playBtn">▶</button>
+
+        <button id="nextBtn">⏭</button>
+
+      </div>
+
+      <div class="progress-container">
+
+        <span id="currentTime">0:00</span>
+
+        <input type="range" id="progressBar" value="0">
+
+        <span id="duration">0:00</span>
+
+      </div>
+
+    </div>
+
+    <div class="volume-box">
+
+      🔊
+
+      <input
+        type="range"
+        id="volumeSlider"
+        min="0"
+        max="1"
+        step="0.01"
+        value="1"
+      >
+
+    </div>
+
+  </footer>
+
+  <!-- TOAST -->
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
