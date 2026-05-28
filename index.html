@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>LLETMI LEK Music</title>
 
   <link rel="stylesheet" href="style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -26,26 +32,36 @@
         <h1 class="logo">LLETMI lek</h1>
 
         <nav>
+
           <ul>
-            <li class="active">🏠 Home</li>
-            <li>🔍 Search</li>
-            <li>🎧 Library</li>
-            <li>❤️ Favorites</li>
-            <li>🎵 Playlists</li>
-            <li>🕒 Recently Played</li>
+
+            <li class="nav-link active">🏠 Home</li>
+
+            <li class="nav-link">🎧 Library</li>
+
+            <li class="nav-link">❤️ Favorites</li>
+
+            <li class="nav-link">🎵 Playlists</li>
+
+            <li class="nav-link">🕒 Recently Played</li>
+
           </ul>
+
         </nav>
 
       </div>
 
       <!-- PROFILE -->
-      <div class="profile">
+      <div class="profile" id="profileBtn">
 
         <img src="covers/profile image.jpg" alt="">
 
         <div>
+
           <h4>Premium User</h4>
+
           <p>LLETMI lek Music</p>
+
         </div>
 
       </div>
@@ -59,18 +75,24 @@
       <header class="topbar">
 
         <div class="search-box">
+
           <input
             type="text"
             id="searchInput"
             placeholder="Search songs or artists..."
           >
+
         </div>
 
         <div class="top-actions">
 
-          <button>🔔</button>
+          <button id="notificationBtn">🔔</button>
 
-          <img src="covers/profile image.jpg" alt="">
+          <img
+            src="covers/profile image.jpg"
+            alt=""
+            id="topProfileBtn"
+          >
 
         </div>
 
@@ -87,7 +109,12 @@
             LLETMI lek kur ti keni
           </p>
 
-          <button class="hero-btn">Start Listening</button>
+          <button
+            class="hero-btn"
+            id="startListeningBtn"
+          >
+            Start Listening
+          </button>
 
         </div>
 
@@ -97,10 +124,15 @@
       <section>
 
         <div class="section-title">
+
           <h2>Trending Songs</h2>
+
         </div>
 
-        <div class="songs-grid" id="songsGrid"></div>
+        <div
+          class="songs-grid"
+          id="songsGrid"
+        ></div>
 
       </section>
 
@@ -113,11 +145,18 @@
 
     <div class="song-info">
 
-      <img id="playerCover" src="covers/cover1.jpg" alt="">
+      <img
+        id="playerCover"
+        src="covers/cover1.jpg"
+        alt=""
+      >
 
       <div>
+
         <h4 id="playerTitle">No song selected</h4>
+
         <p id="playerArtist">---</p>
+
       </div>
 
     </div>
@@ -138,7 +177,11 @@
 
         <span id="currentTime">0:00</span>
 
-        <input type="range" id="progressBar" value="0">
+        <input
+          type="range"
+          id="progressBar"
+          value="0"
+        >
 
         <span id="duration">0:00</span>
 
@@ -163,10 +206,60 @@
 
   </footer>
 
+  <!-- PROFILE MODAL -->
+
+  <div class="modal" id="profileModal">
+
+    <div class="modal-content glass">
+
+      <h2>Profile</h2>
+
+      <button class="modal-btn" id="signInBtn">
+        Sign In
+      </button>
+
+      <button class="modal-btn" id="createAccountBtn">
+        Create Account
+      </button>
+
+      <button class="close-modal" id="closeProfileModal">
+        Close
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- NOTIFICATION MODAL -->
+
+  <div class="modal" id="notificationModal">
+
+    <div class="modal-content glass">
+
+      <h2>Notifications</h2>
+
+      <p class="modal-text">
+        Sign in to unlock notifications,
+        favorites, playlists and more.
+      </p>
+
+      <button class="modal-btn" id="notificationSignIn">
+        Sign In
+      </button>
+
+      <button class="close-modal" id="closeNotificationModal">
+        Close
+      </button>
+
+    </div>
+
+  </div>
+
   <!-- TOAST -->
   <div id="toast"></div>
 
   <script src="script.js"></script>
 
 </body>
+
 </html>
