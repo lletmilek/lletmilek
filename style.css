@@ -19,6 +19,7 @@ body{
   overflow:hidden;
 }
 
+/* SCROLLBAR */
 ::-webkit-scrollbar{
   width:8px;
 }
@@ -28,6 +29,7 @@ body{
   border-radius:20px;
 }
 
+/* GLASS */
 .glass{
   background:var(--glass);
   backdrop-filter:blur(20px);
@@ -40,7 +42,6 @@ body{
 }
 
 /* SIDEBAR */
-
 .sidebar{
   width:260px;
   background:rgba(0,0,0,0.3);
@@ -77,6 +78,7 @@ body{
   display:flex;
   align-items:center;
   gap:14px;
+  cursor:pointer;
 }
 
 .profile img{
@@ -85,7 +87,6 @@ body{
 }
 
 /* MAIN */
-
 .main{
   flex:1;
   overflow-y:auto;
@@ -94,7 +95,6 @@ body{
 }
 
 /* TOPBAR */
-
 .topbar{
   display:flex;
   justify-content:space-between;
@@ -131,12 +131,17 @@ body{
 
 .top-actions img{
   width:45px;
-  height: 45px;
+  height:45px;
   border-radius:50%;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.top-actions img:hover{
+  transform:scale(1.08);
 }
 
 /* HERO */
-
 .hero{
   padding:50px;
   border-radius:30px;
@@ -182,7 +187,6 @@ body{
 }
 
 /* SONGS */
-
 .section-title{
   margin-bottom:20px;
 }
@@ -243,7 +247,6 @@ body{
 }
 
 /* PLAYER */
-
 .player{
   position:fixed;
   bottom:0;
@@ -302,7 +305,6 @@ body{
 }
 
 /* TOAST */
-
 #toast{
   position:fixed;
   top:20px;
@@ -319,7 +321,6 @@ body{
 }
 
 /* LOADER */
-
 #loader{
   position:fixed;
   inset:0;
@@ -348,7 +349,6 @@ body{
 }
 
 /* MOBILE */
-
 .menu-toggle{
   display:none;
 }
@@ -356,79 +356,38 @@ body{
 @media(max-width:900px){
 
   .sidebar{
-  position:fixed;
-  left:-100%;
-  top:0;
-  height:100%;
-  width:270px;
-  z-index:999;
-  transition:0.35s ease;
-
-  /* FIXED BACKGROUND */
-  background:#0b1020;
-
-  /* GLASS EFFECT */
-  backdrop-filter:blur(20px);
-
-  /* SHADOW */
-  box-shadow:0 0 40px rgba(0,0,0,0.6);
-
-  /* BORDER */
-  border-right:1px solid rgba(255,255,255,0.08);
-}
-
-.sidebar.active{
-  left:0;
-}
-
-/* DARK OVERLAY */
-
-.sidebar::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    180deg,
-    rgba(15,23,42,0.98),
-    rgba(17,24,39,0.98)
-  );
-  z-index:-1;
-}
+    position:fixed;
+    left:-100%;
+    top:0;
+    height:100%;
+    width:270px;
+    z-index:999;
+    transition:0.35s ease;
+    background:#0b1020;
+    backdrop-filter:blur(20px);
+    box-shadow:0 0 40px rgba(0,0,0,0.6);
+    border-right:1px solid rgba(255,255,255,0.08);
+  }
 
   .sidebar.active{
     left:0;
   }
 
   .menu-toggle{
-  display:block;
-  position:fixed;
-  top:20px;
-  left:20px;
-  width:48px;
-  height:48px;
-  border:none;
-  border-radius:16px;
-
-  background:rgba(139,92,246,0.9);
-
-  backdrop-filter:blur(10px);
-
-  color:white;
-
-  font-size:20px;
-
-  cursor:pointer;
-
-  z-index:1001;
-
-  box-shadow:0 0 25px rgba(139,92,246,0.45);
-
-  transition:0.3s;
-}
-
-.menu-toggle:hover{
-  transform:scale(1.05);
-}
+    display:block;
+    position:fixed;
+    top:20px;
+    left:20px;
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:16px;
+    background:rgba(139,92,246,0.9);
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    z-index:1001;
+  }
 
   .topbar{
     margin-top:60px;
@@ -452,5 +411,83 @@ body{
   .progress-container input{
     width:180px;
   }
+}
 
+/* ========================= */
+/* MODALS (FIXED GLOBAL)     */
+/* ========================= */
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  opacity:0;
+  pointer-events:none;
+
+  transition:0.3s;
+
+  z-index:5000;
+}
+
+.show-modal{
+  opacity:1 !important;
+  pointer-events:auto !important;
+}
+
+.modal-content{
+  width:90%;
+  max-width:420px;
+  padding:35px;
+  border-radius:28px;
+  text-align:center;
+  animation:modalPop 0.3s ease;
+}
+
+.modal-content h2{
+  margin-bottom:20px;
+  font-size:30px;
+}
+
+.modal-text{
+  opacity:0.7;
+  margin-bottom:25px;
+  line-height:1.6;
+}
+
+.modal-btn{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:18px;
+  background:var(--accent);
+  color:white;
+  margin-bottom:15px;
+  cursor:pointer;
+}
+
+.close-modal{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:18px;
+  background:rgba(255,255,255,0.08);
+  color:white;
+  cursor:pointer;
+}
+
+@keyframes modalPop{
+  from{
+    transform:scale(0.8);
+    opacity:0;
+  }
+  to{
+    transform:scale(1);
+    opacity:1;
+  }
 }
