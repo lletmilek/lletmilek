@@ -42,12 +42,13 @@ const songs = [
     cover: "covers/cover6.jpg"
   },
 
-    {
+  {
     title: "maneskin mix",
     artist: "Maneskin",
     file: "https://www.dropbox.com/scl/fi/ilskxkd1v5m6a4u305oqo/M-neskin-Greatest-Hits-full-album-M-neskin-Best-Songs-Best-of-M-neskin.mp3?rlkey=vwwq9p9uph4niovn5ndfb9nap&st=v1l73ex1&raw=1",
     cover: "covers/covermaneskin.jpg"
-  }, 
+  },
+
   {
     title: "sorre/fr",
     artist: "buta",
@@ -61,7 +62,7 @@ const songs = [
     file: "music/song12.mp3",
     cover: "covers/coverbuta.jpg"
   },
-  
+
   {
     title: "Mon Amour",
     artist: "SLIMANE",
@@ -74,7 +75,7 @@ const songs = [
     artist: "SLIMANE x VITA",
     file: "music/song5.mp3",
     cover: "covers/cover5.jpg"
-  }, 
+  },
 
   {
     title: "trendafil",
@@ -82,41 +83,51 @@ const songs = [
     file: "https://www.dropbox.com/scl/fi/7yur0cw2rb3bxovsarhvd/Dhurata-Dora-ft.-Flori-Trendafil-Official-Video-4K.mp3?rlkey=m15ykdzs2gwypre7igm3cljnx&st=h6290lxo&raw=1",
     cover: "covers/coverflori.jpg"
   },
+
   {
     title: "NUk ma la",
     artist: "Ledri x Flori",
     file: "https://www.dropbox.com/scl/fi/elt6ncsoenlu00okc5rlv/Ledri-Vula-ft.-Flori-Mumajesi-Nuk-ma-la.mp3?rlkey=5z7fxiyh75k8awr5zxltbcsy6&st=m0llv8np&raw=1",
     cover: "covers/coverflori.jpg"
-  }, 
+  },
+
   {
     title: "Si dikur",
     artist: "Shkurte Gashi x Flori",
     file: "https://www.dropbox.com/scl/fi/jvo8tjo1pwv3qx1htja0i/Shkurte-Gashi-ft-Flori-Mumajesi-Si-Dikur-Official-Video.mp3?rlkey=91zl8db9dgk9zepza4yve70qg&st=46x98yn1&raw=1",
     cover: "covers/coverflori.jpg"
-  },
+  }
 
 ];
 
-const songsGrid = document.getElementById("songsGrid");
+/* AUDIO */
 
 const audio = new Audio();
 
 let currentSong = 0;
+
 let isPlaying = false;
 
-/* PLAYER ELEMENTS */
+/* ELEMENTS */
+
+const songsGrid = document.getElementById("songsGrid");
 
 const playBtn = document.getElementById("playBtn");
+
 const nextBtn = document.getElementById("nextBtn");
+
 const prevBtn = document.getElementById("prevBtn");
 
 const playerTitle = document.getElementById("playerTitle");
+
 const playerArtist = document.getElementById("playerArtist");
+
 const playerCover = document.getElementById("playerCover");
 
 const progressBar = document.getElementById("progressBar");
 
 const currentTimeEl = document.getElementById("currentTime");
+
 const durationEl = document.getElementById("duration");
 
 const volumeSlider = document.getElementById("volumeSlider");
@@ -129,7 +140,7 @@ function renderSongs(songList){
 
   songsGrid.innerHTML = "";
 
-  songList.forEach((song,index)=>{
+  songList.forEach((song)=>{
 
     const card = document.createElement("div");
 
@@ -144,7 +155,8 @@ function renderSongs(songList){
 
     card.addEventListener("click",()=>{
 
-      const realIndex = songs.findIndex(s => s.file === song.file);
+      const realIndex =
+      songs.findIndex(s => s.file === song.file);
 
       loadSong(realIndex);
 
@@ -216,7 +228,18 @@ playBtn.addEventListener("click",()=>{
 
 });
 
-/* NEXT */
+/* START LISTENING */
+
+document.getElementById("startListeningBtn")
+.addEventListener("click",()=>{
+
+  loadSong(0);
+
+  playSong();
+
+});
+
+/* NEXT SONG */
 
 nextBtn.addEventListener("click",()=>{
 
@@ -234,7 +257,7 @@ nextBtn.addEventListener("click",()=>{
 
 });
 
-/* PREVIOUS */
+/* PREVIOUS SONG */
 
 prevBtn.addEventListener("click",()=>{
 
@@ -252,6 +275,24 @@ prevBtn.addEventListener("click",()=>{
 
 });
 
+/* AUTO NEXT */
+
+audio.addEventListener("ended",()=>{
+
+  currentSong++;
+
+  if(currentSong >= songs.length){
+
+    currentSong = 0;
+
+  }
+
+  loadSong(currentSong);
+
+  playSong();
+
+});
+
 /* UPDATE PROGRESS */
 
 audio.addEventListener("timeupdate",()=>{
@@ -260,9 +301,11 @@ audio.addEventListener("timeupdate",()=>{
 
   progressBar.value = audio.currentTime;
 
-  currentTimeEl.innerText = formatTime(audio.currentTime);
+  currentTimeEl.innerText =
+  formatTime(audio.currentTime);
 
-  durationEl.innerText = formatTime(audio.duration);
+  durationEl.innerText =
+  formatTime(audio.duration);
 
 });
 
@@ -301,16 +344,55 @@ function formatTime(time){
 document.getElementById("searchInput")
 .addEventListener("input",(e)=>{
 
-  const value = e.target.value.toLowerCase();
+  const value =
+  e.target.value.toLowerCase();
 
-  const filteredSongs = songs.filter(song =>
+  const filteredSongs =
+  songs.filter(song =>
 
     song.title.toLowerCase().includes(value) ||
+
     song.artist.toLowerCase().includes(value)
 
   );
 
   renderSongs(filteredSongs);
+
+  setTimeout(()=>{
+
+    const firstCard =
+    document.querySelector(".song-card");
+
+    if(firstCard){
+
+      firstCard.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+      });
+
+    }
+
+  },100);
+
+});
+
+/* ENTER TO PLAY */
+
+document.getElementById("searchInput")
+.addEventListener("keydown",(e)=>{
+
+  if(e.key === "Enter"){
+
+    const firstCard =
+    document.querySelector(".song-card");
+
+    if(firstCard){
+
+      firstCard.click();
+
+    }
+
+  }
 
 });
 
@@ -329,15 +411,6 @@ function showToast(message){
   },2500);
 
 }
-
-/* THEME TOGGLE */
-
-document.getElementById("themeToggle")
-.addEventListener("click",()=>{
-
-  document.body.classList.toggle("light-mode");
-
-});
 
 /* KEYBOARD SHORTCUTS */
 
@@ -367,9 +440,11 @@ document.addEventListener("keydown",(e)=>{
 
 /* MOBILE MENU */
 
-const menuToggle = document.querySelector(".menu-toggle");
+const menuToggle =
+document.querySelector(".menu-toggle");
 
-const sidebar = document.querySelector(".sidebar");
+const sidebar =
+document.querySelector(".sidebar");
 
 menuToggle.addEventListener("click",()=>{
 
@@ -377,14 +452,165 @@ menuToggle.addEventListener("click",()=>{
 
 });
 
-/* LOADER */
+/* PROFILE + MODALS */
 
-window.addEventListener("load",()=>{
+const profileBtn =
+document.getElementById("profileBtn");
 
-  setTimeout(()=>{
+const topProfileBtn =
+document.getElementById("topProfileBtn");
 
-    document.getElementById("loader").style.display = "none";
+const profileModal =
+document.getElementById("profileModal");
 
-  },1500);
+const closeProfileModal =
+document.getElementById("closeProfileModal");
+
+const notificationBtn =
+document.getElementById("notificationBtn");
+
+const notificationModal =
+document.getElementById("notificationModal");
+
+const closeNotificationModal =
+document.getElementById("closeNotificationModal");
+
+/* OPEN PROFILE */
+
+if(profileBtn){
+
+  profileBtn.addEventListener("click",()=>{
+
+    profileModal.classList.add("show-modal");
+
+  });
+
+}
+
+/* TOP PROFILE */
+
+if(topProfileBtn){
+
+  topProfileBtn.addEventListener("click",()=>{
+
+    profileModal.classList.add("show-modal");
+
+  });
+
+}
+
+/* CLOSE PROFILE */
+
+if(closeProfileModal){
+
+  closeProfileModal.addEventListener("click",()=>{
+
+    profileModal.classList.remove("show-modal");
+
+  });
+
+}
+
+/* OPEN NOTIFICATIONS */
+
+if(notificationBtn){
+
+  notificationBtn.addEventListener("click",()=>{
+
+    notificationModal.classList.add("show-modal");
+
+  });
+
+}
+
+/* CLOSE NOTIFICATIONS */
+
+if(closeNotificationModal){
+
+  closeNotificationModal.addEventListener("click",()=>{
+
+    notificationModal.classList.remove("show-modal");
+
+  });
+
+}
+
+/* SIGN IN */
+
+const signInBtn =
+document.getElementById("signInBtn");
+
+if(signInBtn){
+
+  signInBtn.addEventListener("click",()=>{
+
+    showToast("Sign In coming soon");
+
+  });
+
+}
+
+/* CREATE ACCOUNT */
+
+const createAccountBtn =
+document.getElementById("createAccountBtn");
+
+if(createAccountBtn){
+
+  createAccountBtn.addEventListener("click",()=>{
+
+    showToast("Create Account coming soon");
+
+  });
+
+}
+
+/* NOTIFICATION SIGN IN */
+
+const notificationSignIn =
+document.getElementById("notificationSignIn");
+
+if(notificationSignIn){
+
+  notificationSignIn.addEventListener("click",()=>{
+
+    showToast("Sign In coming soon");
+
+  });
+
+}
+
+/* NAVBAR LINKS */
+
+const navLinks =
+document.querySelectorAll(".nav-link");
+
+navLinks.forEach(link=>{
+
+  link.addEventListener("click",()=>{
+
+    profileModal.classList.add("show-modal");
+
+    showToast("Please sign in first");
+
+  });
+
+});
+
+/* CLOSE MODALS OUTSIDE */
+
+window.addEventListener("click",(e)=>{
+
+  if(e.target === profileModal){
+
+    profileModal.classList.remove("show-modal");
+
+  }
+
+  if(e.target === notificationModal){
+
+    notificationModal.classList.remove("show-modal");
+
+  }
 
 });
