@@ -1,34 +1,100 @@
 const songs = [
+
   {
-    title: "Lot",
-    artist: "Butrint Imeri x Tayna",
-    file: "music/song1.mp3",
+    title: "Latest Hits",
+    artist: "Fadrit Tula",
+    file: "https://www.dropbox.com/scl/fi/3dkuzr0sitcvite1jvtgk/Hitet-Shqip-2026-Don-Xhoni-Dhurata-Dora-Era-Istrefi-Butrint-Imeri-Hitet-e-Reja-Shqip-2026.mp3?rlkey=hfrlii1ubsro6suttnv6mkb3f&st=9w75e53i&raw=1",
     cover: "covers/cover1.jpg"
   },
+
   {
-    title: "Behind Barz",
-    artist: "VINZ",
-    file: "music/song2.mp3",
+    title: "Random HITS",
+    artist: "Random",
+    file: "https://www.dropbox.com/scl/fi/t6zw5gg8k01hy7wrr65ly/Top-Hits-2026-Trending-Songs-2026-Top-Songs-2026-Top-Music-fTKqtvXjkvo.mp3?rlkey=49jtiuvnztmqs2rduk14ferla&st=gzlk5g34&raw=1",
     cover: "covers/cover2.jpg"
   },
+
   {
-    title: "Gangland",
-    artist: "Hellbanianz",
+    title: "mix Mj",
+    artist: "Michael Jackson",
+    file: "https://www.dropbox.com/scl/fi/f6mwwdqcogzxz58ea5jpp/The-Best-Of-Michael-Jackson-Michael-Jackson-Greatest-Hits-07GHdlabCtg.mp3?rlkey=edfkh6rgwwg54o2vg7h917axg&st=nu4beh3n&raw=1",
+    cover: "covers/covermj.jpg"
+  },
+
+  {
+    title: "Drake mix",
+    artist: "Drake",
+    file: "https://www.dropbox.com/scl/fi/b5flvdghdr71o0q8orr34/Drake-2025-MIX-Best-Collection-God-s-Plan-Which-One-NOKIA-She-Will-UFnf_CySIfE.mp3?rlkey=mx8jquxb0wgpu96wklo72rczo&st=k1xyrg7b&raw=1",
+    cover: "covers/coverdrake.jpg"
+  },
+
+  {
+    title: "US rap mix",
+    artist: "Drake, kendrick, more",
+    file: "https://www.dropbox.com/scl/fi/aw5kzx2ow3q0xpq3kyghp/47_100-RAP-PARTY-MIX-pt.4-Drake-Future-Kendrick-Lamar-Kanye-West-Saweetie-Doja-Cat-etc.mp3?rlkey=8gh6foxk48wgt4ckgllf4ja49&st=2v91w0z3&raw=1",
+    cover: "covers/cover33.jpg"
+  },
+
+  {
+    title: "uk rap",
+    artist: "uk rap",
+    file: "https://www.dropbox.com/scl/fi/do9jpx0qlo6tivchxg9c3/Best-of-UK-Rap-2023-DJ-Mix-_-Central-Cee-Dave-J-Hus-Headie-One-more-_-DJ-Mibro-fCVJifjG3go.mp3?rlkey=n5sgcwrm3jtd902bu43rwtm1q&st=c0t2g7dj&raw=1",
+    cover: "covers/cover6.jpg"
+  },
+
+    {
+    title: "maneskin mix",
+    artist: "Maneskin",
+    file: "https://www.dropbox.com/scl/fi/ilskxkd1v5m6a4u305oqo/M-neskin-Greatest-Hits-full-album-M-neskin-Best-Songs-Best-of-M-neskin.mp3?rlkey=vwwq9p9uph4niovn5ndfb9nap&st=v1l73ex1&raw=1",
+    cover: "covers/covermaneskin.jpg"
+  }, 
+  {
+    title: "sorre/fr",
+    artist: "buta",
+    file: "music/song11.mp3",
+    cover: "covers/coverbuta.jpg"
+  },
+
+  {
+    title: "autostrad",
+    artist: "buta",
+    file: "music/song12.mp3",
+    cover: "covers/coverbuta.jpg"
+  },
+  
+  {
+    title: "Mon Amour",
+    artist: "SLIMANE",
     file: "music/song3.mp3",
-    cover: "covers/cover3.jpg"
+    cover: "covers/coverslimane.jpg"
   },
+
   {
-    title: "Zemer ty",
-    artist: "Dafina x ricky rich",
-    file: "music/song4.mp3",
-    cover: "covers/cover4.jpg"
-  },
-  {
-    title: "Vone",
-    artist: "Dhurata dora",
+    title: "Avant toi",
+    artist: "SLIMANE x VITA",
     file: "music/song5.mp3",
     cover: "covers/cover5.jpg"
-  }
+  }, 
+
+  {
+    title: "trendafil",
+    artist: "Dhurata Flori",
+    file: "https://www.dropbox.com/scl/fi/7yur0cw2rb3bxovsarhvd/Dhurata-Dora-ft.-Flori-Trendafil-Official-Video-4K.mp3?rlkey=m15ykdzs2gwypre7igm3cljnx&st=h6290lxo&raw=1",
+    cover: "covers/coverflori.jpg"
+  },
+  {
+    title: "NUk ma la",
+    artist: "Ledri x Flori",
+    file: "https://www.dropbox.com/scl/fi/elt6ncsoenlu00okc5rlv/Ledri-Vula-ft.-Flori-Mumajesi-Nuk-ma-la.mp3?rlkey=5z7fxiyh75k8awr5zxltbcsy6&st=m0llv8np&raw=1",
+    cover: "covers/coverflori.jpg"
+  }, 
+  {
+    title: "Si dikur",
+    artist: "Shkurte Gashi x Flori",
+    file: "https://www.dropbox.com/scl/fi/jvo8tjo1pwv3qx1htja0i/Shkurte-Gashi-ft-Flori-Mumajesi-Si-Dikur-Official-Video.mp3?rlkey=91zl8db9dgk9zepza4yve70qg&st=46x98yn1&raw=1",
+    cover: "covers/coverflori.jpg"
+  },
+
 ];
 
 const songsGrid = document.getElementById("songsGrid");
