@@ -80,14 +80,14 @@ const songs = [
   {
     title: "trendafil",
     artist: "Dhurata Flori",
-    file: "https://www.dropbox.com/scl/fi/7yur0cw2rb3bxovsarhvd/Dhurata-Dora-ft.-Flori-Trendafil-Official-Video-4K.mp3?rlkey=m15ykdzs2gwypre7igm3cljnx&st=h6290lxo&raw=1",
+    file: "songd1",
     cover: "covers/coverflori.jpg"
   },
 
   {
-    title: "NUk ma la",
-    artist: "Ledri x Flori",
-    file: "https://www.dropbox.com/scl/fi/elt6ncsoenlu00okc5rlv/Ledri-Vula-ft.-Flori-Mumajesi-Nuk-ma-la.mp3?rlkey=5z7fxiyh75k8awr5zxltbcsy6&st=m0llv8np&raw=1",
+    title: "dai dai",
+    artist: "shakira",
+    file: "songsh",
     cover: "covers/coverflori.jpg"
   },
 
