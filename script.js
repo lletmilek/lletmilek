@@ -90,7 +90,18 @@ const songs = [
     file: "music/songsh.mp3",
     cover: ""
   },
-
+    {
+    title: "zitti e buoni",
+    artist: "Maneskin",
+    file: "music/songm.mp3",
+    cover: "covers/covermaneskin.jpg"
+  },
+  {
+    title: "i wanna be ur slave ",
+    artist: "Maneskin",
+    file: "music/songm1.mp3",
+    cover: "covers/covermaneskin.jpg"
+  },
 ];
 
 /* AUDIO */
