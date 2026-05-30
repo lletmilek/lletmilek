@@ -78,25 +78,18 @@ const songs = [
   },
 
   {
-    title: "trendafil",
-    artist: "Dhurata Flori",
-    file: "songd1",
-    cover: "covers/coverflori.jpg"
+    title: "Training season",
+    artist: "DUa lipa",
+    file: "music.songd1.mp3",
+    cover: ""
   },
 
   {
     title: "dai dai",
     artist: "shakira",
-    file: "songsh",
-    cover: "covers/coverflori.jpg"
+    file: "music/songsh.mp3",
+    cover: ""
   },
-
-  {
-    title: "Si dikur",
-    artist: "Shkurte Gashi x Flori",
-    file: "https://www.dropbox.com/scl/fi/jvo8tjo1pwv3qx1htja0i/Shkurte-Gashi-ft-Flori-Mumajesi-Si-Dikur-Official-Video.mp3?rlkey=91zl8db9dgk9zepza4yve70qg&st=46x98yn1&raw=1",
-    cover: "covers/coverflori.jpg"
-  }
 
 ];
 
