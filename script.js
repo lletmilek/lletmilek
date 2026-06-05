@@ -64,6 +64,24 @@ const songs = [
   },
 
   {
+    title: "Ekspertski",
+    artist: "buta x ago",
+    file: "music/songagoe.mp3",
+    cover: "covers/coverbuta.jpg"
+  },
+  {
+    title: "100 ops nuk jan shum",
+    artist: "buta x ago",
+    file: "music/songago100.mp3",
+    cover: "covers/coverbuta.jpg"
+  },
+    {
+    title: "Memphis",
+    artist: "buta x lluni",
+    file: "music/songllunim.mp3",
+    cover: "covers/coverbuta.jpg"
+  },
+  {
     title: "Mon Amour",
     artist: "SLIMANE",
     file: "music/song3.mp3",
@@ -80,17 +98,18 @@ const songs = [
   {
     title: "Training season",
     artist: "DUa lipa",
-    file: "music.songd1.mp3",
-    cover: ""
+    file: "music/songd1.mp3",
+    cover: "covers/coverdua.jpg"
   },
 
   {
     title: "dai dai",
     artist: "shakira",
     file: "music/songsh.mp3",
-    cover: ""
+    cover: "covers/covershakira.jpg"
   },
-    {
+  
+  {
     title: "zitti e buoni",
     artist: "Maneskin",
     file: "music/songm.mp3",
