@@ -121,6 +121,12 @@ const songs = [
     file: "music/songm1.mp3",
     cover: "covers/covermaneskin.jpg"
   },
+  {
+    title: "Tu luta",
+    artist: "Flori x Shkurte",
+    file: "music/songflori1.mp3",
+    cover: "covers/coverflori.jpg"
+  },
 ];
 
 /* AUDIO */
