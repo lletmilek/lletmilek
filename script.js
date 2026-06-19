@@ -151,6 +151,12 @@ const songs = [
     file: "music/florishkurte1.mp3",
     cover: "covers/coverflori.jpg"
   },
+  {
+    title: "trojan horse",
+    artist: "Dave x central cee",
+    file: "music/davetrojan.mp3",
+    cover: "covers/cover6.jpg"
+  },
 
 ];
 
