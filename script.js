@@ -122,11 +122,36 @@ const songs = [
     cover: "covers/covermaneskin.jpg"
   },
   {
+    title: "Prototip",
+    artist: "lluni",
+    file: "music/lluni-prototip.mp3",
+    cover: "covers/coverbuta.jpg"
+  },
+  {
     title: "Tu luta",
     artist: "Flori x Shkurte",
+    file: "music/florishkurte.mp3",
+    cover: "covers/coverflori.jpg"
+  },
+  {
+    title: "Anash & Doja",
+    artist: "Flori x Anxhelina",
+    file: "music/florianxhela.mp3",
+    cover: "covers/coverflori.jpg"
+  },
+  {
+    title: "Ja ke bo vetes",
+    artist: "Flori x Bruno",
     file: "music/songflori1.mp3",
     cover: "covers/coverflori.jpg"
   },
+  {
+    title: "si dikur",
+    artist: "Flori x Shkurte",
+    file: "music/florishkurte1.mp3",
+    cover: "covers/coverflori.jpg"
+  },
+
 ];
 
 /* AUDIO */
