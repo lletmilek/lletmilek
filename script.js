@@ -142,7 +142,7 @@ const songs = [
   {
     title: "Ja ke bo vetes",
     artist: "Flori x Bruno",
-    file: "music/songflori1.mp3",
+    file: "music/floribruno.mp3",
     cover: "covers/coverflori.jpg"
   },
   {
