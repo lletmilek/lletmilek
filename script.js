@@ -197,7 +197,7 @@ const songs = [
     title: "nan",
     artist: "alis",
     file: "music/alis.mp3",
-    cover: "covers/alis.jpg"
+    cover: "covers/alis.jpeg"
   },
   {
     title: "zjerm",
