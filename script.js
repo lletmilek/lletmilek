@@ -193,6 +193,36 @@ const songs = [
     file: "music/belle.mp3",
     cover: "covers/coverslimane.jpg"
   },
+  {
+    title: "nan",
+    artist: "alis",
+    file: "music/alis.mp3",
+    cover: "covers/alis.jpg"
+  },
+  {
+    title: "zjerm",
+    artist: "shkodra elektronike",
+    file: "music/shkodra.mp3",
+    cover: "covers/shkodra.jpg"
+  },
+  {
+    title: "zjarr e ftoht",
+    artist: "luiz ejlli",
+    file: "music/zjarreftoht.mp3",
+    cover: "covers/shkodra.jpg"
+  },
+  {
+    title: "formidable",
+    artist: "Stormae",
+    file: "music/formidable.mp3",
+    cover: "covers/stormae.jpg"
+  },
+  {
+    title: "alors on dance",
+    artist: "Stormae",
+    file: "music/alorsondance.mp3",
+    cover: "covers/stormae.jpg"
+  },
 ];
 
 /* AUDIO */
