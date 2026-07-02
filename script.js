@@ -157,7 +157,42 @@ const songs = [
     file: "music/davetrojan.mp3",
     cover: "covers/cover6.jpg"
   },
-
+  {
+    title: "najher",
+    artist: "ylli limani",
+    file: "music/najher.mp3",
+    cover: "covers/ylli.jpg"
+  },
+  {
+    title: "Malet",
+    artist: "Ylli Limani",
+    file: "music/malet.mp3",
+    cover: "covers/ylli.jpg"
+  },
+  {
+    title: "A fleur de toi",
+    artist: "Slimane",
+    file: "music/slimaneafdt.mp3",
+    cover: "covers/coverslimane.jpg"
+  },
+  {
+    title: "fairytale",
+    artist: "Alexander Rybak",
+    file: "music/fairytale.mp3",
+    cover: "covers/cover2.jpg"
+  },
+  {
+    title: "N95",
+    artist: "Kendrick Lamar",
+    file: "music/n95.mp3",
+    cover: "covers/kendrick.jpg"
+  },
+  {
+    title: "belle",
+    artist: "slimane, gims, djadju",
+    file: "music/belle.mp3",
+    cover: "covers/coverslimane.jpg"
+  },
 ];
 
 /* AUDIO */
