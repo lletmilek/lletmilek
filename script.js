@@ -223,6 +223,12 @@ const songs = [
     file: "music/alorsondance.mp3",
     cover: "covers/stormae.jpg"
   },
+  {
+    title: "I am alive",
+    artist: "Elhaida Dani",
+    file: "music/iamalive.mp3",
+    cover: "covers/elhaida.jpg"
+  },
 ];
 
 /* AUDIO */
